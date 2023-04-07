@@ -1,0 +1,22 @@
+<div id="product" class="flex">
+    <img src="{{product.picture}}" alt="{{product.title}}">
+    <div id="product-infos" class="flex column">
+        <div id="product-description" class="flex column">
+            <h2>{{product.title}}</h2>
+            <p class="price">{{price | number:'1.2'}} €</p>
+            <p class="description">{{product.description}}</p>
+        </div>
+        <div *ngIf="product.category === 'pizza'" id="ingredients" class="flex column">
+            <h3>Ingrédient inclus</h3>
+            <div id="form" action="" class="flex column">
+                <div *ngFor="let includedIngredient of product.includedIngredients; let index =index;">
+                    <div class="flex ingredient-name">
+                        <div class="label">{{includedIngredient.ingredient.title}}</div>
+                        <button [class.unactive]="!includedIngredient.isSelected" (click)="switchIngredient(includedIngredient.ingredient.id)"></button>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

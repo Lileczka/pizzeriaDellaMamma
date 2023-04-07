@@ -1,0 +1,66 @@
+#cart{
+    gap: 30px;
+}
+h2{
+    font-size: 20px;
+    font-weight: 700;
+    font-style: 10px;
+}
+
+#subSection {
+    justify-content: space-between;
+    width: 100%;
+}
+#deleteCart-btn {
+    background: none;
+    color: var(--rouge);
+    font: 400 16px var(--inter);
+}
+
+#cart-products{
+    gap: 25px;
+}
+
+
+#total {
+    font: 400 20px var(--inter);
+    align-self: flex-end;
+}
+
+#total span {
+    font-weight: 700;
+}
+
+#validate-btn{
+    font: 700 16px var(--inter);
+    width: 100%;
+    padding: 25px 0px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+#cart a{
+    font: 400 16px var(--inter);
+    color: var(--dark-blue);
+    text-decoration: underline;
+}
+#toModifyTable-link{
+    align-self: flex-end;
+}
+#toProducts-link {
+    align-self: flex-start;
+}
+
+#noCart {
+    align-items: flex-start;
+    gap: 50px;
+}
+
+#noCart div {
+    gap: 20px;
+    align-items: flex-start;
+}
+
+#noCart a {
+    text-decoration: underline;
+}

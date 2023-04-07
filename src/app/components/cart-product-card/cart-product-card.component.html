@@ -1,0 +1,23 @@
+<div class="container">
+  <a routerLink="/products/{{product.product.id}}"> <img src="{{product.product.picture}}" alt="{{product.product.title}}">
+  </a>
+  <div class="blockText">
+    <a routerLink="/products/{{product.product.id}}"><h3>{{product.product.title}}</h3></a>
+    <p class="price">{{price | number : '1.2'}}€</p>
+    <!--div avec le choix -->
+    <div class="textChoix">
+      <div id="ingredients" class="flex">
+        <ng-container *ngFor="let ingredient of product.product.includedIngredients">
+          <p *ngIf="!ingredient.isSelected"><i class="fas fa-light fa-ban"></i> {{ingredient.ingredient.title}}, </p>
+        </ng-container>
+      </div>
+      <div *ngIf="product.product.category === 'pizza'"id="extras" class="flex">
+        <p >Extras : </p>
+        <ng-container *ngFor="let extra of product.product.extras">
+          <p *ngIf="extra.quantity > 0"> <span *ngIf="extra.quantity > 1">{{extra.quantity}}</span> {{extra.ingredient.title}} (+{{extra.additionalPrice/100 | number:'1.2'}}€), </p>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  <button *ngIf="showButton" (click)="removefromCart()" id="delete-btn">x</button>
+</div>

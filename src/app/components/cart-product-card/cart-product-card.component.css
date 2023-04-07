@@ -1,0 +1,55 @@
+.container {
+    width: 752px;
+    min-height: 166px;
+    background-color: var(--white);
+    display: flex;
+    position: relative;
+}
+.blockText {
+   margin-top: 10px;
+   margin-left: 20px;
+   font-size: 16px;
+   font-weight: 700;
+   width: 600px;
+   margin-bottom: 20px;
+}
+
+.blockText .price{
+    font-family: var(--inter);
+    margin-top: 3%;
+}
+img {
+width: 136px;
+height: 136px;
+margin-top: 12px;
+margin-left: 20px;
+}
+
+.textChoix {
+    margin-top: 40px;
+    font: 400 16px var(--inter);
+}
+
+
+.fa-ban{
+    font-size: 13px;
+}
+
+#ingredients {
+    justify-content: flex-start;
+    gap : 5px;
+}
+
+#extras {
+    gap : 5px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+#delete-btn{
+    background: white;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: black;
+    font : 700 16px var(--inter)
+}
